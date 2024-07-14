@@ -37,7 +37,7 @@ selected = option_menu(None, ["Home", 'Predict Price','Status Check'],
            orientation="horizontal")
 if selected=="Home":
    st.title(":rainbow[Industrial Copper Modeling Prediction]")
-   st.image("C:/Users/DELL XPS/Documents/prediction2.jpg")
+   st.image("https://raw.githubusercontent.com/HRLeo19/Coppermodel/main/prediction2.jpg")
 if selected=='Predict Price':
     try:
         col1,col2,col3=st.columns(3)
