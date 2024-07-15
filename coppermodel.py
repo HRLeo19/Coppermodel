@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 import pickle
 
@@ -36,8 +35,53 @@ selected = option_menu(None, ["Home", 'Predict Price','Status Check'],
            icons=['house', 'currency-dollar','stars'], menu_icon="cast", default_index=1,
            orientation="horizontal")
 if selected=="Home":
-   st.title(":rainbow[Industrial Copper Modeling Prediction]")
-   st.image("https://raw.githubusercontent.com/HRLeo19/Coppermodel/main/prediction2.jpg")
+    st.title(":rainbow[Industrial Copper Modeling Prediction]")
+    st.image("https://raw.githubusercontent.com/HRLeo19/Coppermodel/main/prediction2.jpg")
+    st.markdown("---")
+
+    st.markdown("""
+    <style>
+    .verticalLine {
+        border-left: 2px solid #555;
+        height: 1100px;  /* Adjust height as needed */
+        position: absolute;
+        left: 50%;       /* Adjust left position */
+        margin-left: -3px; /* Adjust margin-left to be half of border-left width */
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown('<div class="verticalLine"></div>', unsafe_allow_html=True)
+    v1,v2=st.columns(2)
+   
+    with v1:
+        st.title(":orange[Regression Model]")
+        st.write('''#### The copper industry deals with less complex data related to sales and pricing. However, this data may suffer from some issues, which can affect the accuracy of manual predictions. Dealing with these challenges manually can be time-consuming and may not result in optimal pricing decisions. A :blue[**machine learning regression model**] can address these issues by utilizing advanced techniques. ''')
+        st.write("")
+        st.markdown("#### 👉 A Regression Machine Learning model is a type of model used to predict the :green[Continuous outcomes] based on the input data...")
+        st.write("")
+        st.markdown("#### 👉 The Goal of Regression is to establish a relationship between one more independent variables(feautures) and a dependent variable(target) and use this relationship to make the Predictions...")
+        st.image("C:/Users/DELL XPS/Documents/price.jpg")
+    with v2:
+        st.title(":orange[Classification Model]")
+        st.write("#### Another area where the copper industry faces challenges is in capturing the leads. A lead :blue[**ML classification model**] is a system for evaluating and classifying leads based on how likely they are to become a customer .")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.markdown("#### 👉 A Classification Model is a type of machine learning model designed to predict :green[categorical outcomes]...")
+        st.write("")
+        st.markdown("#### 👉 The Primary goal of the classification model is to identify which class(or category) a new data point belongs to,based on the training data...")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.image("C:/Users/DELL XPS/Documents/wrl.jpg")
+    st.write("---")
+    st.image("C:/Users/DELL XPS/Documents/prediction1.webp")
+
 if selected=='Predict Price':
     try:
         col1,col2,col3=st.columns(3)
@@ -95,3 +139,4 @@ if selected=="Status Check":
                 st.write(f"### **Lead is :red[**{predict_cc}**] 😱.Less Likely become regular Customer**")
     except:
        st.write("#### **Please Enter Details Properly,All Boxes to be filled only with Numbers.**")
+
