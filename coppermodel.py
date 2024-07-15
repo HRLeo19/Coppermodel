@@ -14,17 +14,17 @@ copper={"country":[28,25,30,32,38,78,27,77,113,79,26,39,40,84,80,107,89],
        1693867563,     611733, 1690738219, 1722207579,  929423819,
        1665584320, 1665584662, 1665584642]}
 
-with open("C:/Users/DELL XPS/Desktop/python/coppermodel/Lrmodel.pkl","rb") as files:
+with open("Lrmodel.pkl","rb") as files:
  mode=pickle.load(files)
-with open("C:/Users/DELL XPS/Desktop/python/coppermodel/oheit.pkl","rb") as files:
+with open("oheit.pkl","rb") as files:
  ohe1=pickle.load(files)
-with open("C:/Users/DELL XPS/Desktop/python/coppermodel/ohes.pkl","rb") as files:
+with open("ohes.pkl","rb") as files:
  ohe2=pickle.load(files)
-with open("C:/Users/DELL XPS/Desktop/python/coppermodel/Lrscaler.pkl","rb") as files:
+with open("Lrscaler.pkl","rb") as files:
  scaler=pickle.load(files)
-with open("C:/Users/DELL XPS/Desktop/python/coppermodel/RFCmodel.pkl","rb") as files:
+with open("RFCmodel.pkl","rb") as files:
  rfc=pickle.load(files)
-with open("C:/Users/DELL XPS/Desktop/python/coppermodel/Classifyscaler.pkl","rb") as files:
+with open("Classifyscaler.pkl","rb") as files:
  clscaler=pickle.load(files)
 
 st.set_page_config(page_title="Model",
@@ -78,9 +78,9 @@ if selected=="Home":
         st.write("")
         st.write("")
         st.write("")
-        st.image("C:/Users/DELL XPS/Documents/wrl.jpg")
+        st.image("wrl.jpg")
     st.write("---")
-    st.image("C:/Users/DELL XPS/Documents/prediction1.webp")
+    st.image("prediction1.webp")
 
 if selected=='Predict Price':
     try:
