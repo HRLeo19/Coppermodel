@@ -27,6 +27,10 @@ So to do this , with the old data of the copper modeling will train ML best regr
 
 
 
+https://github.com/user-attachments/assets/ed32cb52-2471-4015-9706-6181f50f2afe
+
+
+
 
 ## Deployment
 
